@@ -7,6 +7,7 @@
 ## We use the function "makeCacheMatrix" to create the data structure, and the function "cacheSolve"
 ## to retrieve (or calculate, if not cached) the inverse.
 
+# makeCacheMatrix : This functions contructs a "matrix with cache" data structure from the given matrix (mat)
 makeCacheMatrix <- function(mat = matrix()) 
 {
 	# Initialize the cached inverse to NULL (not calculated)
@@ -34,7 +35,7 @@ makeCacheMatrix <- function(mat = matrix())
 	list ( set = set, get = get, setCachedInverse = setCachedInverse, getCachedInverse = getCachedInverse )
 }
 
-# This function returns the inverse (it "solves" the matrix) of the given "matrixWithCache" structure, which should
+# cacheSolve : This function returns the inverse (it "solves" the matrix) of the given "matrixWithCache" structure, which should
 # have been created using "makeCacheMatrix"
 cacheSolve <- function( matrixWithCache, ...) 
 {
